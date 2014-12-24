@@ -1,45 +1,48 @@
 shariff-social-share
 ====================
-Das Shariff-Social-Share WordPress-Plugin basiert auf dem Open-Source-Projekt [ct shariff](https://github.com/heiseonline/shariff) von [ct und heise online](http://www.heise.de/ct/artikel/Shariff-Social-Media-Buttons-mit-Datenschutz-2467514.html).
+The Shariff-Social-Share Wordpress-Plugin is based on the open-source-project [ct shariff](https://github.com/heiseonline/shariff) from [ct und heise online](http://www.heise.de/ct/artikel/Shariff-Social-Media-Buttons-mit-Datenschutz-2467514.html).
 
-##Verwendung des Shortcodes
-Mithilfe des Shortcodes können Sie die Social-Share-Buttons an einer beliebigen Stelle im Editor einfügen. Eine direkte Einbindung in ein Template-File ist meist ebenfalls möglich.   
 
-Einfach:
+##Use of Shortcodes
+With help of Shortcodes you can place the Social-Share-Buttons on any place in your editor. A direct integration in a template file is mostly possible. 
+
+Simple:
 
     [shariff-social-share]
     
-Mit Attributen für Shortcode bezogene Einstellungen:
+With attributes for Shortcode related settings:
 
     [shariff-social-share atts="Wert"]
     
-| atts (Attribut) | 		  Wert			 |
+
+| atts (Attribut) | 		  Wert		 |
 | :-------------- | :------------------: |
 | color           | colored, white, grey |
 | orientation     | horizontal, vertical |
 | class           | html class attribute |
 | styles          | CSS-Styles			 |
 
-##CSS & JS Import-Modi
-Für die Einbindung von CSS und Javascript gibt es folgende Modi:
 
-* automatisch
-* manuell
+##CSS & JS Import-modes
+For embedding CSS and Javascript there are following modes available:
 
-###automatisch
-Automatisch lädt die CSS- und JS-Datei in Abhängigkeit zur:
+* automatically
+* manually
 
-* Einstellung zur Einbundung auf Seiten/Beiträgen
-* seiten-/beitragsbasierenden deaktivierung
+###automatically
+Automatically the CSS and JS file loads in relation to:
 
-####manuell
-Manuell lädt die CSS- und JS-Datei nur bei Vorkommen des Shortcodes auf einer Seite oder Beitrag.
+* Settings for embedding on page and posts
+* websites-/postbased deactivation
+
+####manually
+The CSS and JS file are only loaded manually when Shortcode is embedded into the page or post.
 
 ##Screenshot
 ![Shariff-Social-Share Screenshot](https://www.jg-bits.de/wp-content/uploads/2014/12/JG-Bits-Shariff-Social-Share-WordPress-Plugin.png)
 
-##Datenbank-Prefix
+##Database-Prefix
 
-Alle Einstellungen des Plugins werden mittels der WordPress-Settings-API in der Datenbank mit folgendem Prefix gespeichert:
+All settings of the plugin are saved via the WordPress-Settings-API into the database with the following prefix:
 
     shariff_social_share_
