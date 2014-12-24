@@ -1,0 +1,214 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: shariff-social-share\n"
+"POT-Creation-Date: 2014-12-23 21:06+0100\n"
+"PO-Revision-Date: 2014-12-23 21:06+0100\n"
+"Last-Translator: \n"
+"Language-Team: JG-Bits UG (haftungsbeschränkt) <info@jg-bits.de>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: includes\n"
+
+#: includes/class-shariff-social-share-meta-box.php:73
+msgid "deactivate?"
+msgstr "﻿deaktivieren?"
+
+#: includes/class-shariff-social-share-meta-box.php:78
+msgid "default"
+msgstr "Standard"
+
+#: includes/class-shariff-social-share-meta-box.php:79
+#: includes/class-shariff-social-share.php:192
+msgid "top"
+msgstr "oben"
+
+#: includes/class-shariff-social-share-meta-box.php:80
+#: includes/class-shariff-social-share.php:192
+msgid "bottom"
+msgstr "unten"
+
+#: includes/class-shariff-social-share-meta-box.php:81
+#: includes/class-shariff-social-share.php:192
+msgid "top &amp; bottom"
+msgstr "oben &amp; unten"
+
+#: includes/class-shariff-social-share-output-generator.php:74
+msgid "en"
+msgstr "de"
+
+#: includes/class-shariff-social-share.php:71
+msgid "Shariff Social Share Settings"
+msgstr "Shariff Social Share Einstellungen"
+
+#: includes/class-shariff-social-share.php:72
+msgid ""
+"For individual embedding of the Social-Share-Buttons you can use the "
+"following Shortcode:"
+msgstr ""
+"Zum invidivuellen Einbetten der Social-Share-Buttons können Sie auch "
+"folgenden Shortcode verwenden:"
+
+#: includes/class-shariff-social-share.php:74
+msgid "or set individual settings for share-buttons only for this shortcode:"
+msgstr ""
+"oder setze individuelle Einstellungen für die Share-Buttons bezogen nur auf "
+"diesen Shortcode:"
+
+#: includes/class-shariff-social-share.php:75
+msgid "for more see: "
+msgstr "für mehr siehe: "
+
+#: includes/class-shariff-social-share.php:101
+msgid "Platforms"
+msgstr "Plattformen"
+
+#: includes/class-shariff-social-share.php:160
+msgid "Orientation"
+msgstr "Ausrichtung"
+
+#: includes/class-shariff-social-share.php:172
+msgid "Color"
+msgstr "Farbe"
+
+#: includes/class-shariff-social-share.php:178
+msgid "colored"
+msgstr "farbig"
+
+#: includes/class-shariff-social-share.php:179
+msgid "grey"
+msgstr "grau"
+
+#: includes/class-shariff-social-share.php:180
+msgid "white"
+msgstr "weiß"
+
+#: includes/class-shariff-social-share.php:186
+msgid "Placement for share buttons"
+msgstr "Position für share buttons"
+
+#: includes/class-shariff-social-share.php:198
+msgid "Embedding"
+msgstr "Einbindung"
+
+#: includes/class-shariff-social-share.php:204
+msgid "automatic"
+msgstr "automatisch"
+
+#: includes/class-shariff-social-share.php:204
+msgid "manual"
+msgstr "manuell"
+
+#: includes/class-shariff-social-share.php:206
+msgid ""
+"automatical: use this to embed at the defined position for each post /page"
+msgstr ""
+"automatisch: benutze dies zum Einbetten für alle Seiten und jeden Beitrag an "
+"der definierten Stelle"
+
+#: includes/class-shariff-social-share.php:207
+msgid "manual: use this if you only want to embed manually e.g. with Shortcode"
+msgstr ""
+"manuell: benutzte dies, wenn du z.B. nur die Einbindung des Shortcodes "
+"verwenden möchtest"
+
+#: includes/class-shariff-social-share.php:213
+msgid "deactivate CSS"
+msgstr "CSS deaktivieren"
+
+#: includes/class-shariff-social-share.php:219
+msgid "Activate this to use your own CSS-styles"
+msgstr "Aktivieren Sie dies, um eigene CSS-Styles zu verwenden"
+
+#: includes/class-shariff-social-share.php:225
+msgid "CSS-Class"
+msgstr "CSS-Klasse/n"
+
+#: includes/class-shariff-social-share.php:233
+msgid "CSS-styles"
+msgstr "CSS-Styles"
+
+#: includes/class-shariff-social-share.php:241
+msgid "Pages"
+msgstr "Seiten"
+
+#: includes/class-shariff-social-share.php:247
+msgid "activating the &#10004; embeddes on pages"
+msgstr "Der &#10004; aktiviert das Einbinden auf Seiten"
+
+#: includes/class-shariff-social-share.php:253
+msgid "Posts"
+msgstr "Beiträge"
+
+#: includes/class-shariff-social-share.php:259
+msgid "activating the &#10004; embeddes on posts"
+msgstr "Der &#10004; aktiviert das Einbinden bei Beiträgen"
+
+#: includes/class-shariff-social-share.php:277
+msgid "Live-Preview"
+msgstr "Live-Vorschau"
+
+#: includes/class-shariff-social-share.php:309
+msgid "for design adjustments you can insert the desired classes for CSS"
+msgstr ""
+"für Anpassungen am Design können Sie hier die gewünschten Klassen für CSS "
+"eintragen"
+
+#: includes/class-shariff-social-share.php:323
+msgid "for design adjustments you can insert any desired CSS-styles"
+msgstr ""
+"für Anpassungen am Design können Sie hier die gewünschten CSS-Styles "
+"eintragen"
+
+#~ msgid "The &#10004; activate embedding on pages"
+#~ msgstr "Der &#10004; aktiviert das Einbinden auf Seiten"
+
+#~ msgid "The &#10004; activate embedding on posts"
+#~ msgstr "Der &#10004; aktiviert das Einbinden bei Beiträgen"
+
+#~ msgid "for adjustments on design, you can insert those desired CSS-styles"
+#~ msgstr ""
+#~ "für Anpassungen am Design können Sie hier die gewünschten CSS-Styles "
+#~ "eintragen"
+
+#~ msgid "for adjustments on design you can insert the desired classes for CSS"
+#~ msgstr ""
+#~ "für Anpassungen am Design können Sie hier die gewünschten Klassen für CSS "
+#~ "eintragen"
+
+#~ msgid "manual: use this if you want to embed manually e.g. with Shortcode"
+#~ msgstr ""
+#~ "manuell: benutzte dies, wenn du z.B. nur die Einbindung des Shortcodes "
+#~ "verwenden möchtest"
+
+#~ msgid ""
+#~ "or set individually settings for share-buttons only for this shortcode:"
+#~ msgstr "oder setzte ind"
+
+#~ msgid "or individually for each Shortcode for e.g. "
+#~ msgstr "oder beispielsweise für jeden Shortcode"
+
+#~ msgid "Preview"
+#~ msgstr "Vorschau"
+
+#~ msgid "Place for share buttons"
+#~ msgstr "Position für share buttons"
+
+#~ msgid "automatic: use to embed at the defined position for each post /page"
+#~ msgstr ""
+#~ "automatisch: benutze dies zum Einbetten für jede Seiten und jeden Beitrag "
+#~ "an der definierten Stelle "
+
+#~ msgid "manuell"
+#~ msgstr "manuell"
+
+#~ msgid "manuell: use if you want to embed manually e.g. with Shortcode"
+#~ msgstr ""
+#~ "manuell: benutzte dies wenn du z.B. nur die Einbindung des Shortcodes "
+#~ "verwenden möchtest"
