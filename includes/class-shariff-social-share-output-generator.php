@@ -66,10 +66,10 @@ class shariff_social_share_output_generator
 			}
 
 			if (!empty($this->styles)) {
-				$this->styles = ' style="' . $this->styles . '" ';
+				$this->styles = ' style="' . $this->styles . '"';
 			}
 
-			$sharif_html = '<div class="shariff shariff-social-share' . $this->classes . '"' . $this->styles . 'data-backend-url="'.plugins_url( 'backend/index.php', dirname(__FILE__) ).'" 
+			$sharif_html = '<div class="shariff shariff-social-share' . $this->classes . '"' . $this->styles . ' data-backend-url="'.plugins_url( 'backend/index.php', dirname(__FILE__) ).'" 
 							data-orientation="' . $this->orientation . '" data-services="' . $this->plattforms . '" 
 							data-theme="' . $this->color . '" data-lang="' . __('en', 'shariff-social-share') . '" data-url="'.get_permalink().'"></div>';
 			switch ($this->position) {
