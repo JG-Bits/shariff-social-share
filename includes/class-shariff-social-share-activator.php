@@ -64,6 +64,30 @@ class shariff_social_share_activator
 
 	    register_setting(
 	        self::plugin_settings_prefix . 'setting',
+	        self::plugin_settings_prefix . 'plattforms_linkedin',
+	        'intval'
+	    );
+
+	    register_setting(
+	        self::plugin_settings_prefix . 'setting',
+	        self::plugin_settings_prefix . 'plattforms_pinterest',
+	        'intval'
+	    );
+
+	    register_setting(
+	        self::plugin_settings_prefix . 'setting',
+	        self::plugin_settings_prefix . 'plattforms_xing',
+	        'intval'
+	    );
+
+	    register_setting(
+	        self::plugin_settings_prefix . 'setting',
+	        self::plugin_settings_prefix . 'plattforms_whatsapp',
+	        'intval'
+	    );
+
+	    register_setting(
+	        self::plugin_settings_prefix . 'setting',
 	        self::plugin_settings_prefix . 'plattforms_mail',
 	        'intval'
 	    );
@@ -142,6 +166,10 @@ class shariff_social_share_activator
 		add_option(self::plugin_settings_prefix . 'plattforms_googleplus', 1);
 		add_option(self::plugin_settings_prefix . 'plattforms_facebook', 1);
 		add_option(self::plugin_settings_prefix . 'plattforms_twitter', 1);
+		add_option(self::plugin_settings_prefix . 'plattforms_linkedin', 1);
+		add_option(self::plugin_settings_prefix . 'plattforms_pinterest', 1);
+		add_option(self::plugin_settings_prefix . 'plattforms_xing', 1);
+		add_option(self::plugin_settings_prefix . 'plattforms_whatsapp', 1);
 		add_option(self::plugin_settings_prefix .'plattforms_mail', 1);
 
 		//default design settings

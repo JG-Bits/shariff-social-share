@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: shariff-social-share\n"
-"POT-Creation-Date: 2014-12-23 21:06+0100\n"
-"PO-Revision-Date: 2014-12-23 21:06+0100\n"
+"POT-Creation-Date: 2015-07-02 19:09+0200\n"
+"PO-Revision-Date: 2015-07-02 19:11+0200\n"
 "Last-Translator: \n"
 "Language-Team: JG-Bits UG (haftungsbeschränkt) <info@jg-bits.de>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.8.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -25,21 +25,21 @@ msgid "default"
 msgstr "Standard"
 
 #: includes/class-shariff-social-share-meta-box.php:79
-#: includes/class-shariff-social-share.php:192
+#: includes/class-shariff-social-share.php:236
 msgid "top"
 msgstr "oben"
 
 #: includes/class-shariff-social-share-meta-box.php:80
-#: includes/class-shariff-social-share.php:192
+#: includes/class-shariff-social-share.php:236
 msgid "bottom"
 msgstr "unten"
 
 #: includes/class-shariff-social-share-meta-box.php:81
-#: includes/class-shariff-social-share.php:192
+#: includes/class-shariff-social-share.php:236
 msgid "top &amp; bottom"
 msgstr "oben &amp; unten"
 
-#: includes/class-shariff-social-share-output-generator.php:74
+#: includes/class-shariff-social-share-output-generator.php:78
 msgid "en"
 msgstr "de"
 
@@ -69,98 +69,102 @@ msgstr "für mehr siehe: "
 msgid "Platforms"
 msgstr "Plattformen"
 
-#: includes/class-shariff-social-share.php:160
+#: includes/class-shariff-social-share.php:204
 msgid "Orientation"
 msgstr "Ausrichtung"
 
-#: includes/class-shariff-social-share.php:172
+#: includes/class-shariff-social-share.php:216
 msgid "Color"
 msgstr "Farbe"
 
-#: includes/class-shariff-social-share.php:178
+#: includes/class-shariff-social-share.php:222
 msgid "colored"
 msgstr "farbig"
 
-#: includes/class-shariff-social-share.php:179
+#: includes/class-shariff-social-share.php:223
 msgid "grey"
 msgstr "grau"
 
-#: includes/class-shariff-social-share.php:180
+#: includes/class-shariff-social-share.php:224
 msgid "white"
 msgstr "weiß"
 
-#: includes/class-shariff-social-share.php:186
+#: includes/class-shariff-social-share.php:230
 msgid "Placement for share buttons"
 msgstr "Position für share buttons"
 
-#: includes/class-shariff-social-share.php:198
+#: includes/class-shariff-social-share.php:242
 msgid "Embedding"
 msgstr "Einbindung"
 
-#: includes/class-shariff-social-share.php:204
+#: includes/class-shariff-social-share.php:248
 msgid "automatic"
 msgstr "automatisch"
 
-#: includes/class-shariff-social-share.php:204
+#: includes/class-shariff-social-share.php:248
 msgid "manual"
 msgstr "manuell"
 
-#: includes/class-shariff-social-share.php:206
+#: includes/class-shariff-social-share.php:250
 msgid ""
 "automatical: use this to embed at the defined position for each post /page"
 msgstr ""
 "automatisch: benutze dies zum Einbetten für alle Seiten und jeden Beitrag an "
 "der definierten Stelle"
 
-#: includes/class-shariff-social-share.php:207
+#: includes/class-shariff-social-share.php:251
 msgid "manual: use this if you only want to embed manually e.g. with Shortcode"
 msgstr ""
 "manuell: benutzte dies, wenn du z.B. nur die Einbindung des Shortcodes "
 "verwenden möchtest"
 
-#: includes/class-shariff-social-share.php:213
+#: includes/class-shariff-social-share.php:257
 msgid "deactivate CSS"
 msgstr "CSS deaktivieren"
 
-#: includes/class-shariff-social-share.php:219
+#: includes/class-shariff-social-share.php:263
 msgid "Activate this to use your own CSS-styles"
 msgstr "Aktivieren Sie dies, um eigene CSS-Styles zu verwenden"
 
-#: includes/class-shariff-social-share.php:225
+#: includes/class-shariff-social-share.php:269
 msgid "CSS-Class"
 msgstr "CSS-Klasse/n"
 
-#: includes/class-shariff-social-share.php:233
+#: includes/class-shariff-social-share.php:277
 msgid "CSS-styles"
 msgstr "CSS-Styles"
 
-#: includes/class-shariff-social-share.php:241
+#: includes/class-shariff-social-share.php:285
 msgid "Pages"
 msgstr "Seiten"
 
-#: includes/class-shariff-social-share.php:247
+#: includes/class-shariff-social-share.php:291
 msgid "activating the &#10004; embeddes on pages"
 msgstr "Der &#10004; aktiviert das Einbinden auf Seiten"
 
-#: includes/class-shariff-social-share.php:253
+#: includes/class-shariff-social-share.php:297
 msgid "Posts"
 msgstr "Beiträge"
 
-#: includes/class-shariff-social-share.php:259
+#: includes/class-shariff-social-share.php:303
 msgid "activating the &#10004; embeddes on posts"
 msgstr "Der &#10004; aktiviert das Einbinden bei Beiträgen"
 
-#: includes/class-shariff-social-share.php:277
+#: includes/class-shariff-social-share.php:321
 msgid "Live-Preview"
 msgstr "Live-Vorschau"
 
-#: includes/class-shariff-social-share.php:309
+#: includes/class-shariff-social-share.php:329
+msgid "share"
+msgstr "teilen"
+
+#: includes/class-shariff-social-share.php:417
 msgid "for design adjustments you can insert the desired classes for CSS"
 msgstr ""
 "für Anpassungen am Design können Sie hier die gewünschten Klassen für CSS "
 "eintragen"
 
-#: includes/class-shariff-social-share.php:323
+#: includes/class-shariff-social-share.php:431
 msgid "for design adjustments you can insert any desired CSS-styles"
 msgstr ""
 "für Anpassungen am Design können Sie hier die gewünschten CSS-Styles "

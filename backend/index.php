@@ -2,7 +2,6 @@
 require_once __DIR__.'/vendor/autoload.php';
 
 use Heise\Shariff\Backend;
-use Zend\Config\Reader\Json;
 
 class Application
 {
@@ -24,8 +23,8 @@ class Application
         unset($services[$servies_count-1]);
         $services = array_values($services);
 
-        $services = array("facebook","twitter","googleplus");
-        $arrayconfig = Array ( "cache" => Array ( "ttl" => 60, "cacheDir" => __DIR__),"domain" => $_SERVER["HTTP_HOST"] ,"services" => $services);
+        $services = array("Facebook","Twitter","GooglePlus", "LinkedIn", "Flattr", "Pinterest", "Xing");
+        $arrayconfig = Array ( "cache" => Array ("ttl" => 60, "cacheDir" => __DIR__),"domain" => $_SERVER["HTTP_HOST"] ,"services" => $services);
 
         $shariff = new Backend($arrayconfig);
         echo json_encode($shariff->get($_GET["url"]));

@@ -39,7 +39,7 @@ Automatically the CSS and JS file loads in relation to:
 The CSS and JS file are only loaded manually when Shortcode is embedded into the page or post.
 
 ##Screenshot
-![Shariff-Social-Share Screenshot](https://www.jg-bits.de/wp-content/uploads/2014/12/JG-Bits-Shariff-Social-Share-WordPress-Plugin.png)
+![Shariff-Social-Share Screenshot](https://www.jg-bits.de/wp-content/uploads/2015/07/shariff-social-share-wp-plugin-v1.1.0-e1436651371658.png)
 
 ##Database-Prefix
 

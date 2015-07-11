@@ -36,7 +36,7 @@ Automatisch lädt die CSS- und JS-Datei in Abhängigkeit zur:
 Manuell lädt die CSS- und JS-Datei nur bei Vorkommen des Shortcodes auf einer Seite oder Beitrag.
 
 ##Screenshot
-![Shariff-Social-Share Screenshot](https://www.jg-bits.de/wp-content/uploads/2014/12/JG-Bits-Shariff-Social-Share-WordPress-Plugin.png)
+![Shariff-Social-Share Screenshot](https://www.jg-bits.de/wp-content/uploads/2015/07/shariff-social-share-wp-plugin-v1.1.0-e1436651371658.png)
 
 ##Datenbank-Prefix
 

@@ -24,6 +24,10 @@ delete_option();
 delete_option(shariff_social_share_activator::plugin_settings_prefix . 'plattforms_googleplus');
 delete_option(shariff_social_share_activator::plugin_settings_prefix . 'plattforms_facebook');
 delete_option(shariff_social_share_activator::plugin_settings_prefix . 'plattforms_twitter');
+delete_option(shariff_social_share_activator::plugin_settings_prefix . 'plattforms_linkedin');
+delete_option(shariff_social_share_activator::plugin_settings_prefix . 'plattforms_pinterest');
+delete_option(shariff_social_share_activator::plugin_settings_prefix . 'plattforms_xing');
+delete_option(shariff_social_share_activator::plugin_settings_prefix . 'plattforms_whatsapp');
 delete_option(shariff_social_share_activator::plugin_settings_prefix . 'plattforms_mail');
 
 //default design settings

@@ -45,6 +45,10 @@ class shariff_social_share_output_generator
 	private $plattform_keys = array('plattforms_facebook', 
 									'plattforms_twitter',
 									'plattforms_googleplus',
+									'plattforms_linkedin',
+									'plattforms_pinterest',
+									'plattforms_xing',
+									'plattforms_whatsapp',
 									'plattforms_mail');
 
 	/**

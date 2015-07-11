@@ -107,7 +107,7 @@ class shariff_social_share_shortcode
 		if (get_option(self::plugin_settings_prefix . 'design_embedding') === 'ma­nu­al' || 
 			(get_option(self::plugin_settings_prefix . 'design_embedding') === 'automatic' && !get_option(self::plugin_settings_prefix . 'design_pages') && is_page($post->ID)) ||
 			(get_option(self::plugin_settings_prefix . 'design_embedding') === 'automatic' && !get_option(self::plugin_settings_prefix . 'design_posts') && get_post_type( $post->ID) == 'post') ||
-			$page_post_based_deactivation[0] == TRUE) 
+			isset($page_post_based_deactivation[0]) && $page_post_based_deactivation[0] == TRUE) 
 		{
 			$content = get_post($post->ID);
 			if ( has_shortcode( $content->post_content, 'shariff-social-share' ))

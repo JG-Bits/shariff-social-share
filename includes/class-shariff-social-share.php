@@ -136,6 +136,50 @@ class shariff_social_share_class
 	        )
 	    );
 
+	    add_settings_field(
+	        'linkedIn',
+	        'linkedIn',
+	        array($this, 'get_checkbox'),
+	        self::plugin_settings_prefix . 'setting',
+	        'plattforms_settings_section',
+	        array(
+	            'plattforms_linkedin'
+	        )
+	    );
+
+	    add_settings_field(
+	        'pinterest',
+	        'pinterest',
+	        array($this, 'get_checkbox'),
+	        self::plugin_settings_prefix . 'setting',
+	        'plattforms_settings_section',
+	        array(
+	            'plattforms_pinterest'
+	        )
+	    );
+
+	    add_settings_field(
+	        'xing',
+	        'xing',
+	        array($this, 'get_checkbox'),
+	        self::plugin_settings_prefix . 'setting',
+	        'plattforms_settings_section',
+	        array(
+	            'plattforms_xing'
+	        )
+	    );
+
+	    add_settings_field(
+	        'whatsapp',
+	        'whatsapp',
+	        array($this, 'get_checkbox'),
+	        self::plugin_settings_prefix . 'setting',
+	        'plattforms_settings_section',
+	        array(
+	            'plattforms_whatsapp'
+	        )
+	    );
+
 	    add_settings_field( 
 	        'mail',                      
 	        'Mail',               
@@ -275,25 +319,66 @@ class shariff_social_share_class
 	public function print_design_preview()
 	{
 		$sharif_html = '<div class="shariff-preview"><p class="description"><b>' . __('Live-Preview', 'shariff-social-share') . '</b></p>';
-		$sharif_html .= '<div class="shariff shariff-social-share" data-backend-url="http://localhost:8888/webprojekte/jg-bits/wordpress/wp-content/plugins/shariff-social-share/backend/index.php" data-orientation="horizontal" data-services="[&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;,&quot;mail&quot;,&quot;info&quot;]" data-theme="colored" data-lang="de" data-url="http://localhost:8888/webprojekte/jg-bits/wordpress/erfahrung-strato-all-inkl/">
-	<ul class="theme-colored orientation-horizontal">
-		<li class="shariff-button facebook">
-			<a href=""><span class="share_text">teilen</span></a>
-		</li>
-		<li class="shariff-button twitter">
-			<a href=""><span class="share_text">tweet</span></a>
-		</li>
-		<li class="shariff-button googleplus">
-			<a href=""><span class="share_text">+1</span></a>
-		</li>
-		<li class="shariff-button mail">
-			<a href=""><span class="share_text">mail</span></a>
-		</li>
-		<li class="shariff-button info">
-			<a href=""><span class="share_text">Info</span></a>
-		</li>
-	</ul>
-</div></div>';
+		$sharif_html .= '<div class="shariff shariff-social-share" data-backend-url="http://localhost:8888/webprojekte/jg-bits/wordpress/wp-content/plugins/shariff-social-share/backend/index.php" data-orientation="horizontal" data-services="[&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;,&quot;mail&quot;,&quot;info&quot;,&quot;linkedin&quot;,&quot;pinterest&quot;,&quot;xing&quot;,&quot;whatsapp&quot;]" data-theme="colored" data-lang="de" data-url="">
+	<ul class="theme-colored orientation-horizontal">';
+		$sharif_html .= 
+			'<li class="shariff-button facebook' . (esc_attr(get_option(self::plugin_settings_prefix . 'plattforms_facebook')) != 1 ? ' hide': '') . '">
+
+				<a href="">
+					<span class="fa fa-facebook"></span>
+					<span class="share_text">' . __('share', 'shariff-social-share') . '</span>
+				</a>
+			</li>
+			<li class="shariff-button twitter' . (esc_attr(get_option(self::plugin_settings_prefix . 'plattforms_twitter')) != 1 ? ' hide': '') . '">
+				<a href="">
+					<span class="fa fa-twitter"></span>
+					<span class="share_text">tweet</span>
+				</a>
+			</li>
+			<li class="shariff-button googleplus' . (esc_attr(get_option(self::plugin_settings_prefix . 'plattforms_googleplus')) != 1 ? ' hide': '') . '">
+				<a href="">
+					<span class="fa fa-google-plus"></span>
+					<span class="share_text">+1</span>
+				</a>
+			</li>
+			<li class="shariff-button linkedin' . (esc_attr(get_option(self::plugin_settings_prefix . 'plattforms_linkedin')) != 1 ? ' hide': '') . '">
+				<a href="">
+					<span class="fa fa-linkedin"></span>
+					<span class="share_text">' . __('share', 'shariff-social-share') . '</span>
+				</a>
+			</li>
+			<li class="shariff-button pinterest' . (esc_attr(get_option(self::plugin_settings_prefix . 'plattforms_pinterest')) != 1 ? ' hide': '') . '">
+				<a href="">
+					<span class="fa fa-pinterest"></span>
+					<span class="share_text">' . __('share', 'shariff-social-share') . '</span>
+				</a>
+			</li>
+			<li class="shariff-button xing' . (esc_attr(get_option(self::plugin_settings_prefix . 'plattforms_xing')) != 1 ? ' hide': '') . '">
+				<a href="">
+					<span class="fa fa-xing"></span>
+					<span class="share_text">' . __('share', 'shariff-social-share') . '</span>
+				</a>
+			</li>
+			<li class="shariff-button whatsapp' . (esc_attr(get_option(self::plugin_settings_prefix . 'plattforms_whatsapp')) != 1 ? ' hide': '') . '">
+				<a href="">
+					<span class="fa fa-whatsapp"></span>
+					<span class="share_text">' . __('share', 'shariff-social-share') . '</span>
+				</a>
+			</li>
+			<li class="shariff-button mail' . (esc_attr(get_option(self::plugin_settings_prefix . 'plattforms_mail')) != 1 ? ' hide': '') . '">
+				<a href="">
+					<span class="fa fa-envelope"></span>
+					<span class="share_text">mail</span>
+				</a>
+			</li>
+			<li class="shariff-button info">
+				<a href="">
+					<span class="fa fa-info"></span>
+					<span class="share_text">Info</span>
+				</a>
+			</li>
+		</ul>
+	</div></div>';
 		echo $sharif_html;
 	}
 
