@@ -3,14 +3,12 @@
 namespace Heise\Shariff\Backend;
 
 /**
- * Class Facebook
- *
- * @package Heise\Shariff\Backend
+ * Class Facebook.
  */
 class Facebook extends Request implements ServiceInterface
 {
     /**
-     * @return string
+     * {@inheritdoc}
      */
     public function getName()
     {
@@ -18,23 +16,29 @@ class Facebook extends Request implements ServiceInterface
     }
 
     /**
-     * @param string $url
-     * @return \GuzzleHttp\Message\Request
+     * {@inheritdoc}
      */
-    public function getRequest($url)
+    public function setConfig(array $config)
     {
-        $accessToken = $this->getAccessToken();
-        if (null !== $accessToken) {
-            $query = 'https://graph.facebook.com/v2.2/?id=' . $url . '&' . $accessToken;
-        } else {
-            $query = 'https://graph.facebook.com/fql?q=SELECT total_count FROM link_stat WHERE url="'.$url.'"';
+        if (empty($config['app_id']) || empty($config['secret'])) {
+            throw new \InvalidArgumentException('The Facebook app_id and secret must not be empty.');
         }
-        return $this->createRequest($query);
+        parent::setConfig($config);
     }
 
     /**
-     * @param array $data
-     * @return int
+     * {@inheritdoc}
+     */
+    public function getRequest($url)
+    {
+        $accessToken = urlencode($this->config['app_id']) .'|'.urlencode($this->config['secret']);
+        $query = 'https://graph.facebook.com/v2.8/?id='.urlencode($url).'&access_token='.$accessToken;
+
+        return new \GuzzleHttp\Psr7\Request('GET', $query);
+    }
+
+    /**
+     * {@inheritdoc}
      */
     public function extractCount(array $data)
     {
@@ -46,22 +50,5 @@ class Facebook extends Request implements ServiceInterface
         }
 
         return 0;
-    }
-
-    /**
-     * @return \GuzzleHttp\Stream\StreamInterface|null
-     */
-    protected function getAccessToken()
-    {
-        if (isset($this->config['app_id']) && isset($this->config['secret'])) {
-            try {
-                $url = 'https://graph.facebook.com/oauth/access_token?client_id=' .  $this->config['app_id']
-                  . '&client_secret=' . $this->config['secret'] . '&grant_type=client_credentials';
-                $request = $this->client->createRequest('GET', $url);
-                return $this->client->send($request)->getBody(true);
-            } catch (\Exception $e) {
-            }
-        }
-        return null;
     }
 }

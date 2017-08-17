@@ -13,7 +13,7 @@ read/subscribe to the following resources:
  -  ZF Contributor's IRC channel:
     #zftalk.dev on Freenode.net
 
-If you are working on new features or refactoring [create a proposal](https://github.com/zendframework/zend-service-manager/issues/new).
+If you are working on new features or refactoring [create a proposal](https://github.com/zendframework/zend-servicemanager/issues/new).
 
 ## Reporting Potential Security Issues
 
@@ -49,7 +49,7 @@ To run tests:
 - Clone the repository:
 
   ```console
-  $ git clone git@github.com:zendframework/zend-service-manager.git
+  $ git clone git@github.com:zendframework/zend-servicemanager.git
   $ cd
   ```
 
@@ -62,13 +62,13 @@ To run tests:
 
   If you don't have `curl` installed, you can also download `composer.phar` from https://getcomposer.org/
 
-- Run the tests via `phpunit` and the provided PHPUnit config, like in this example:
+- Run the tests:
 
   ```console
-  $ ./vendor/bin/phpunit
+  $ composer test
   ```
 
-You can turn on conditional tests with the phpunit.xml file.
+You can turn on conditional tests with the `phpunit.xml` file.
 To do so:
 
  -  Copy `phpunit.xml.dist` file to `phpunit.xml`
@@ -77,24 +77,23 @@ To do so:
 
 ## Running Coding Standards Checks
 
-This component uses [php-cs-fixer](http://cs.sensiolabs.org/) for coding
-standards checks, and provides configuration for our selected checks.
-`php-cs-fixer` is installed by default via Composer.
+This component follows [PSR-1](http://www.php-fig.org/psr/psr-1/) and
+[PSR-2](http://www.php-fig.org/psr/psr-2/) guidelines, and ships with tooling
+for both checking code against standards, as well as fixing most errors.
 
 To run checks only:
 
 ```console
-$ ./vendor/bin/php-cs-fixer fix . -v --diff --dry-run --config-file=.php_cs
+$ composer cs-check
 ```
 
-To have `php-cs-fixer` attempt to fix problems for you, omit the `--dry-run`
-flag:
+To fix common errors:
 
 ```console
-$ ./vendor/bin/php-cs-fixer fix . -v --diff --config-file=.php_cs
+$ composer cs-fix
 ```
 
-If you allow php-cs-fixer to fix CS issues, please re-run the tests to ensure
+If you allow tooling to fix CS issues, please re-run the tests to ensure
 they pass, and make sure you add and commit the changes after verification.
 
 ## Recommended Workflow for Contributions
@@ -104,19 +103,19 @@ pull your work into the master repository. We recommend using
 [GitHub](https://github.com), as that is where the component is already hosted.
 
 1. Setup a [GitHub account](http://github.com/), if you haven't yet
-2. Fork the repository (http://github.com/zendframework/zend-service-manager)
+2. Fork the repository (http://github.com/zendframework/zend-servicemanager)
 3. Clone the canonical repository locally and enter it.
 
    ```console
-   $ git clone git://github.com:zendframework/zend-service-manager.git
-   $ cd zend-service-manager
+   $ git clone git://github.com:zendframework/zend-servicemanager.git
+   $ cd zend-servicemanager
    ```
 
 4. Add a remote to your fork; substitute your GitHub username in the command
    below.
 
    ```console
-   $ git remote add {username} git@github.com:{username}/zend-service-manager.git
+   $ git remote add {username} git@github.com:{username}/zend-servicemanager.git
    $ git fetch {username}
    ```
 
@@ -179,7 +178,7 @@ Delta compression using up to 2 threads.
 Compression objects: 100% (18/18), done.
 Writing objects: 100% (20/20), 8.19KiB, done.
 Total 20 (delta 12), reused 0 (delta 0)
-To ssh://git@github.com/{username}/zend-service-manager.git
+To ssh://git@github.com/{username}/zend-servicemanager.git
    b5583aa..4f51698  HEAD -> master
 ```
 
@@ -227,3 +226,8 @@ repository, we suggest doing some cleanup of these branches.
    ```console
    $ git push {username} :<branchname>
    ```
+
+
+## Conduct
+
+Please see our [CONDUCT.md](CONDUCT.md) to understand expected behavior when interacting with others in the project.

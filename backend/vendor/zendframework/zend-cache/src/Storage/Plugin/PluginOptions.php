@@ -3,7 +3,7 @@
  * Zend Framework (http://framework.zend.com/)
  *
  * @link      http://github.com/zendframework/zf2 for the canonical source repository
- * @copyright Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright Copyright (c) 2005-2016 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
@@ -56,7 +56,7 @@ class PluginOptions extends AbstractOptions
      * - Serializer
      * @var array
      */
-    protected $serializerOptions = array();
+    protected $serializerOptions = [];
 
     /**
      * Used by:
@@ -105,7 +105,7 @@ class PluginOptions extends AbstractOptions
      */
     public function setExceptionCallback($exceptionCallback)
     {
-        if ($exceptionCallback !== null && !is_callable($exceptionCallback, true)) {
+        if ($exceptionCallback !== null && ! is_callable($exceptionCallback, true)) {
             throw new Exception\InvalidArgumentException('Not a valid callback');
         }
         $this->exceptionCallback = $exceptionCallback;
@@ -187,7 +187,7 @@ class PluginOptions extends AbstractOptions
      */
     public function setSerializer($serializer)
     {
-        if (!is_string($serializer) && !$serializer instanceof SerializerAdapter) {
+        if (! is_string($serializer) && ! $serializer instanceof SerializerAdapter) {
             throw new Exception\InvalidArgumentException(sprintf(
                 '%s expects either a string serializer name or Zend\Serializer\Adapter\AdapterInterface instance; '
                 . 'received "%s"',
@@ -209,9 +209,9 @@ class PluginOptions extends AbstractOptions
      */
     public function getSerializer()
     {
-        if (!$this->serializer instanceof SerializerAdapter) {
+        if (! $this->serializer instanceof SerializerAdapter) {
             // use default serializer
-            if (!$this->serializer) {
+            if (! $this->serializer) {
                 $this->setSerializer(SerializerFactory::getDefaultAdapter());
             // instantiate by class name + serializer_options
             } else {

@@ -7,12 +7,11 @@
 class for different scopes like:
 
 - array utilities functions;
-- hydrators;
-- json serializable interfaces;
 - general messaging systems;
-- strin wrappers;
+- string wrappers;
 - etc.
 
--
+---
+
 - File issues at https://github.com/zendframework/zend-stdlib/issues
-- Documentation is at http://framework.zend.com/manual/current/en/index.html#zend-stdlib
+- Documentation is at https://docs.zendframework.com/zend-stdlib/

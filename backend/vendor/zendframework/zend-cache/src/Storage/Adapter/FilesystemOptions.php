@@ -3,7 +3,7 @@
  * Zend Framework (http://framework.zend.com/)
  *
  * @link      http://github.com/zendframework/zf2 for the canonical source repository
- * @copyright Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright Copyright (c) 2005-2016 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
@@ -125,15 +125,15 @@ class FilesystemOptions extends AdapterOptions
     public function setCacheDir($cacheDir)
     {
         if ($cacheDir !== null) {
-            if (!is_dir($cacheDir)) {
+            if (! is_dir($cacheDir)) {
                 throw new Exception\InvalidArgumentException(
                     "Cache directory '{$cacheDir}' not found or not a directory"
                 );
-            } elseif (!is_writable($cacheDir)) {
+            } elseif (! is_writable($cacheDir)) {
                 throw new Exception\InvalidArgumentException(
                     "Cache directory '{$cacheDir}' not writable"
                 );
-            } elseif (!is_readable($cacheDir)) {
+            } elseif (! is_readable($cacheDir)) {
                 throw new Exception\InvalidArgumentException(
                     "Cache directory '{$cacheDir}' not readable"
                 );
@@ -434,7 +434,7 @@ class FilesystemOptions extends AdapterOptions
             }
 
             // normalize
-            $umask = $umask & 0777;
+            $umask = $umask & ~0002;
         }
 
         if ($this->umask !== $umask) {
