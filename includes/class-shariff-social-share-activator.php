@@ -170,12 +170,12 @@ class shariff_social_share_activator
 		add_option(self::plugin_settings_prefix . 'plattforms_pinterest', 1);
 		add_option(self::plugin_settings_prefix . 'plattforms_xing', 1);
 		add_option(self::plugin_settings_prefix . 'plattforms_whatsapp', 1);
-		add_option(self::plugin_settings_prefix .'plattforms_mail', 1);
+		add_option(self::plugin_settings_prefix . 'plattforms_mail', 1);
 
 		//default design settings
 		add_option(self::plugin_settings_prefix . 'design_embedding', 'automatic');
 		add_option(self::plugin_settings_prefix . 'design_orientation', 'horizontal');
-		add_option(self::plugin_settings_prefix . 'design_color', 'colored');
+		add_option(self::plugin_settings_prefix . 'design_color', 'standard');
 		add_option(self::plugin_settings_prefix . 'design_position', 'bottom');
 		add_option(self::plugin_settings_prefix . 'design_css', 0);
 		add_option(self::plugin_settings_prefix . 'design_css_class', '');

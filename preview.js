@@ -108,7 +108,7 @@ jQuery( document ).ready( function( $ ) {
 
     $( '#shariff_social_share_design_color' ).change( function( e ) {
         var selectedValue = jQuery(this).val();
-        var colors = [ 'white', 'grey', 'colored' ];
+        var colors = [ 'white', 'grey', 'standard' ];
         var value = '';
 
         if ( ( value = colors.indexOf( selectedValue ) ) >= 0 && value < colors.length ) {

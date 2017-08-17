@@ -64,10 +64,11 @@ class shariff_social_share_shortcode
 		//sets shortcode color if used
 		if (isset($atts['color']))
 		{
-			if ($atts['color'] == 'colored' || $atts['color'] == 'grey' || $atts['color'] == 'white')
-			{
+			if ($atts['color'] == 'standard' || $atts['color'] == 'grey' || $atts['color'] == 'white') {
 				$output_gen->color = $atts['color'];
-			}	
+			} else {
+				$output_gen->color = "standard";
+			}
 		}
 		//sets class if in shortcode
 		if (isset($atts['class']))

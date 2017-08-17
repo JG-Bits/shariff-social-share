@@ -42,7 +42,7 @@ class shariff_social_share_class
 	{
 		add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
 		add_action( 'admin_init', array( $this, 'admin_page_init' ) );
-		add_action( 'admin_enqueue_scripts', array($this, 'load_scripts_styles') );
+		add_action( 'admin_enqueue_scripts', array($this, 'load_scripts_styles'), 100 );
 	}
 
 	/**
@@ -72,7 +72,7 @@ class shariff_social_share_class
 	        <p class="description"><?php echo __('For individual embedding of the Social-Share-Buttons you can use the following Shortcode:', 'shariff-social-share');?> </p>
 			<code>[shariff-social-share]</code>
 			<p class="description"><?php echo __('or set individual settings for share-buttons only for this shortcode:', 'shariff-social-share');?></p>
-			<code>[shariff-social-share color="white" orientation="vertical" class="myclass" styles="margin: 10px;"] <?php echo __('for more see: ', 'shariff-social-share');?><a href="https://www.jg-bits.de/?p=670">https://www.jg-bits.de/?p=670</a></code>
+			<code>[shariff-social-share color="standard" orientation="vertical" class="myclass" styles="margin: 10px;"] <?php echo __('for more see: ', 'shariff-social-share');?><a href="https://github.com/JG-Bits/shariff-social-share">https://github.com/JG-Bits/shariff-social-share</a></code>
 			
 	        <?php //settings_errors(); ?>
 	 
@@ -219,7 +219,7 @@ class shariff_social_share_class
 	        'design_settings_section',
 	        array(
 	            'design_color',
-	            array('colored' => __('colored', 'shariff-social-share'), 
+	            array('standard' => __('colored', 'shariff-social-share'), 
 	            	'grey' => __('grey', 'shariff-social-share'), 
 	            	'white' => __('white', 'shariff-social-share'))
 	        )
@@ -319,8 +319,8 @@ class shariff_social_share_class
 	public function print_design_preview()
 	{
 		$sharif_html = '<div class="shariff-preview"><p class="description"><b>' . __('Live-Preview', 'shariff-social-share') . '</b></p>';
-		$sharif_html .= '<div class="shariff shariff-social-share" data-backend-url="http://localhost:8888/webprojekte/jg-bits/wordpress/wp-content/plugins/shariff-social-share/backend/index.php" data-orientation="horizontal" data-services="[&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;,&quot;mail&quot;,&quot;info&quot;,&quot;linkedin&quot;,&quot;pinterest&quot;,&quot;xing&quot;,&quot;whatsapp&quot;]" data-theme="colored" data-lang="de" data-url="">
-	<ul class="theme-colored orientation-horizontal">';
+		$sharif_html .= '<div class="shariff shariff-social-share" data-backend-url="' . plugins_url( 'backend/index.php', dirname(__FILE__) ) . '" data-orientation="horizontal" data-services="[&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;,&quot;mail&quot;,&quot;info&quot;,&quot;linkedin&quot;,&quot;pinterest&quot;,&quot;xing&quot;,&quot;whatsapp&quot;]" data-theme="' . esc_attr(get_option(self::plugin_settings_prefix . 'design_color')) . '" data-lang="de" data-url="">
+	<ul class="theme-' . esc_attr(get_option(self::plugin_settings_prefix . 'design_color')) . ' orientation-horizontal">';
 		$sharif_html .= 
 			'<li class="shariff-button facebook' . (esc_attr(get_option(self::plugin_settings_prefix . 'plattforms_facebook')) != 1 ? ' hide': '') . '">
 

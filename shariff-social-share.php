@@ -2,7 +2,7 @@
 /**
  * Shariff Social Share
  *
- * @version  		1.1.0
+ * @version  		1.2.0
  * @package         shariff_social_share
  * @license 		GPLv2 or later
  * @license 		http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -12,7 +12,7 @@
  * Plugin Name:		Shariff Social Share
  * Plugin URI:		https://www.jg-bits.de/?p=670
  * Description:		Easy and indiviudal embedding of your favourite share-buttons and privacy-protection for share-functionality
- * Version:			1.1.0
+ * Version:			1.2.0
  * Author:			JG-Bits UG (haftungsbeschränkt) / Hendrik Jürst
  * Author URI:		http://www.jg-bits.de/
  * License:			GPLv2 or later

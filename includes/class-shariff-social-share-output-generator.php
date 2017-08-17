@@ -75,7 +75,7 @@ class shariff_social_share_output_generator
 
 			$sharif_html = '<div class="shariff shariff-social-share' . $this->classes . '"' . $this->styles . ' data-backend-url="'.plugins_url( 'backend/index.php', dirname(__FILE__) ).'" 
 							data-orientation="' . $this->orientation . '" data-services="' . $this->plattforms . '" 
-							data-theme="' . $this->color . '" data-lang="' . __('en', 'shariff-social-share') . '" data-url="'.get_permalink().'"></div>';
+							data-theme="' . $this->color . '" data-lang="' . __('en', 'shariff-social-share') . '" data-url="'.get_permalink().'" data-mail-url="mailto:" data-mail-body="' . get_permalink() .'" data-title="' . get_the_title() . '"></div>';
 			switch ($this->position) {
 				case 'top':
 					return $sharif_html . $content;
@@ -145,7 +145,7 @@ class shariff_social_share_output_generator
 					if (!get_option(self::plugin_settings_prefix . 'design_css')) {
 						add_action('wp_enqueue_scripts', array($this, 'load_shariff_social_share_styles'));
 					}
-					add_action('wp_footer', array($this, 'load_shariff_social_share_js'));
+					add_action('wp_footer', array($this, 'load_shariff_social_share_js'), 200);
 
 				}
 				else
@@ -215,7 +215,7 @@ class shariff_social_share_output_generator
 	 */
 	public function load_shariff_social_share_js()
 	{
-		echo '<script async src="'. plugins_url( '/shariff-social-share/frontend/shariff.min.js', dirname( dirname(__FILE__) ) ).'"></script>'."\n";
+		echo '<script async type="text/javascript" src="'. plugins_url( '/shariff-social-share/frontend/shariff.min.js', dirname( dirname(__FILE__) ) ).'"></script>'."\n";
 	}
 }
 ?>
